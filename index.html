@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101014">
+  <meta name="description" content="DevShell Studio — Web design, assistenza informatica, assemblaggio PC e soluzioni digitali su misura.">
+  <title>DevShell Studio — Digital & Tech Studio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <style>
+    :root{--bg:#101014;--surface:#17171d;--surface2:#1e1d25;--text:#f6f4fa;--muted:#aaa6b4;--line:#ffffff18;--purple:#a78bfa;--purple2:#7c3aed;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}img{display:block;max-width:100%}.container{width:min(var(--max),calc(100% - 48px));margin:auto}.top-line{height:2px;background:linear-gradient(90deg,#6d28d9,#c4b5fd,#6d28d9)}
+    header{position:sticky;top:0;z-index:20;background:#101014eF;border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:11px;font-weight:750;letter-spacing:-.5px}.brand-mark{width:36px;height:36px;display:grid;place-items:center;border:1px solid #a78bfa55;background:#a78bfa12;border-radius:11px;color:var(--purple);font-size:17px}.brand span:last-child{display:block}.brand small{display:block;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:-3px}.nav-links{display:flex;align-items:center;gap:30px;font-size:13px;color:#c6c2cf}.nav-links a:hover{color:#fff}.nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:8px;padding:12px 17px;font-size:13px;font-weight:700;transition:.2s ease;border:1px solid transparent;cursor:pointer}.nav-cta,.button-primary{background:var(--purple);color:#17121f}.nav-cta:hover,.button-primary:hover{background:#c4b5fd;transform:translateY(-1px)}.button-secondary{border-color:#ffffff28;background:#ffffff05;color:var(--text)}.button-secondary:hover{border-color:#a78bfa88;background:#a78bfa0d}.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:8px;color:white;padding:8px 11px}
+    .hero{padding:100px 0 86px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:520px;height:520px;right:-200px;top:-230px;background:radial-gradient(circle,#8b5cf62c,transparent 68%);pointer-events:none}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:78px;align-items:center;position:relative}.eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:1.8px;font-size:10px;font-weight:750;color:#c4b5fd}.eyebrow:before{content:"";width:22px;height:1px;background:var(--purple)}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(42px,5.2vw,68px);line-height:1.06;letter-spacing:-3.5px;margin:22px 0 24px;max-width:720px}h1 span{color:var(--purple)}.hero-copy{font-size:17px;line-height:1.8;color:var(--muted);max-width:560px;margin-bottom:30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.hero-note{display:flex;align-items:center;gap:10px;color:#b7b2c0;font-size:11px;margin-top:28px}.status-dot{width:7px;height:7px;border-radius:50%;background:#a78bfa;box-shadow:0 0 0 4px #a78bfa18}
+    .hero-visual{position:relative}.hero-visual img{width:100%;border:1px solid #ffffff1c;border-radius:16px;box-shadow:0 28px 90px #0007}.visual-caption{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted);font-size:11px;margin-top:13px}.visual-caption strong{color:#e8e2f3;font-weight:600}
+    .trustbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:19px 0}.trust-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#bdb8c8;font-size:12px}.trust-inner span{display:flex;align-items:center;gap:9px}.trust-inner b{font-size:14px;color:var(--purple);font-weight:600}
+    section.section{padding:94px 0}.section-header{max-width:650px;margin-bottom:38px}.section-label{color:var(--purple);font-size:10px;letter-spacing:1.8px;text-transform:uppercase;font-weight:750;margin-bottom:13px}.section-header h2,.contact-copy h2{font-size:clamp(31px,4vw,46px);line-height:1.12;letter-spacing:-1.8px;margin-bottom:16px}.section-header p{color:var(--muted);margin:0;max-width:600px}.services{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.service{padding:24px 22px 23px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,#ffffff05,#ffffff01);min-height:236px;transition:transform .2s,border-color .2s}.service:hover{transform:translateY(-3px);border-color:#a78bfa55}.service-icon{width:38px;height:38px;border:1px solid #a78bfa40;background:#a78bfa0d;border-radius:10px;display:grid;place-items:center;color:var(--purple);margin-bottom:24px}.service-icon svg{width:19px;height:19px}.service h3{font-size:15px;letter-spacing:-.2px;margin-bottom:9px}.service p{font-size:12px;color:var(--muted);line-height:1.75;margin:0}
+    .projects-section{background:#141319;border-top:1px solid #ffffff08;border-bottom:1px solid #ffffff08}.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#101014;transition:transform .2s,border-color .2s}.project:hover{transform:translateY(-3px);border-color:#a78bfa55}.project img{width:100%;aspect-ratio:1.43;object-fit:cover;background:#191720}.project-body{padding:20px}.project-meta{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;color:var(--purple);font-weight:750;margin-bottom:8px}.project h3{font-size:17px;letter-spacing:-.4px;margin-bottom:8px}.project p{font-size:12px;color:var(--muted);line-height:1.75;margin:0}.disclaimer{font-size:11px;color:#888391;margin-top:19px}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}.process-step{padding-top:19px;border-top:1px solid #a78bfa65;counter-increment:step}.process-step:before{content:"0" counter(step);display:block;color:var(--purple);font-size:11px;letter-spacing:1px;margin-bottom:22px}.process-step h3{font-size:15px;margin-bottom:8px}.process-step p{font-size:12px;color:var(--muted);line-height:1.8;margin:0}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.about-art{border:1px solid var(--line);border-radius:14px;overflow:hidden}.about-art img{width:100%;aspect-ratio:1/1;object-fit:cover}.about-copy h2{font-size:clamp(31px,4vw,44px);line-height:1.12;letter-spacing:-1.8px;margin:15px 0}.about-copy>p{color:var(--muted);font-size:14px;line-height:1.9}.principles{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:26px}.principle{border-left:2px solid var(--purple);padding-left:13px}.principle strong{display:block;font-size:12px;margin-bottom:3px}.principle span{display:block;color:var(--muted);font-size:11px;line-height:1.6}
+    .contact-section{padding-top:40px!important}.contact-panel{display:grid;grid-template-columns:.9fr 1.1fr;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(130deg,#1b1824,#141319)}.contact-copy{padding:42px}.contact-copy h2{font-size:38px;margin:15px 0}.contact-copy p{color:var(--muted);font-size:13px;line-height:1.85}.email-link{display:inline-flex;color:#d6c8ff;font-size:13px;border-bottom:1px solid #a78bfa55;padding-bottom:4px;margin-top:8px}.contact-form{padding:42px;background:#ffffff03;border-left:1px solid var(--line)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{margin-bottom:15px}.field label{display:block;font-size:11px;color:#d4cfdd;margin-bottom:7px}.field input,.field textarea,.field select{width:100%;border:1px solid #ffffff20;background:#101014;color:var(--text);border-radius:8px;padding:12px 13px;outline:none;font-size:12px}.field input:focus,.field textarea:focus,.field select:focus{border-color:#a78bfa99}.field textarea{min-height:115px;resize:vertical}.field select option{background:#17171d}.form-status{font-size:11px;color:#c4b5fd;margin-top:12px;min-height:18px}.form-hint{font-size:10px;color:#85808e;margin-top:12px;line-height:1.6}
+    footer{padding:27px 0;border-top:1px solid var(--line)}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-brand{font-size:12px;font-weight:750}.footer-brand small{display:block;font-size:10px;color:var(--muted);font-weight:400}.footer-links{display:flex;gap:20px;color:var(--muted);font-size:11px}.copyright{color:#777280;font-size:10px}
+    @media(max-width:900px){.hero-grid{gap:36px}.services{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr);row-gap:30px}.about-grid{gap:38px}.contact-panel{grid-template-columns:1fr}.contact-form{border-left:0;border-top:1px solid var(--line)}}
+    @media(max-width:680px){.container{width:min(var(--max),calc(100% - 32px))}.nav{height:68px}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;padding:15px 22px 20px;background:#101014;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:11px 0}.nav-cta{display:none}.menu-btn{display:block}.hero{padding:70px 0 56px}.hero-grid{grid-template-columns:1fr;gap:36px}h1{font-size:clamp(42px,11vw,60px);letter-spacing:-2.5px}.hero-copy{font-size:15px}.hero-visual{max-width:520px}.trust-inner{justify-content:flex-start;gap:12px 24px}.trust-inner span{width:calc(50% - 12px)}section.section{padding:68px 0}.projects{grid-template-columns:1fr}.project img{aspect-ratio:1.6}.about-grid{grid-template-columns:1fr;gap:28px}.about-art{max-width:480px}.contact-copy,.contact-form{padding:25px}.contact-copy h2{font-size:32px}.form-row{grid-template-columns:1fr;gap:0}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}}
+    @media(max-width:420px){.services,.process-grid{grid-template-columns:1fr}.service{min-height:0}.principles{grid-template-columns:1fr}.hero-actions .button{width:100%}.visual-caption{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="top-line"></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="DevShell Studio home"><span class="brand-mark">D<span style="font-size:10px">/</span></span><span>DevShell Studio<small>Digital & Tech Studio</small></span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Navigazione principale">
+        <a href="#servizi">Servizi</a><a href="#progetti">Portfolio</a><a href="#metodo">Metodo</a><a href="#chi-siamo">Studio</a><a href="#contatti">Contatti</a>
+      </nav>
+      <a class="nav-cta" href="#contatti">Parliamone <span>↗</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Apri menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Tecnologia, con intenzione</div>
+          <h1>Idee digitali.<br><span>Soluzioni concrete.</span></h1>
+          <p class="hero-copy">Progettiamo esperienze web essenziali e aiutiamo persone e attività a usare la tecnologia nel modo giusto. Design curato, supporto informatico e hardware senza complicazioni.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#contatti">Parliamo del tuo progetto <span>↗</span></a><a class="button button-secondary" href="#servizi">Scopri i servizi</a></div>
+          <div class="hero-note"><span class="status-dot"></span> Approccio diretto, soluzioni su misura.</div>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/hero-studio.svg" alt="Illustrazione originale di un'interfaccia digitale minimalista viola su sfondo scuro" width="700" height="560">
+          <div class="visual-caption"><strong>Design pulito. Tecnologia utile.</strong><span>DevShell Studio / 01</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trustbar"><div class="container trust-inner"><span><b>↗</b> Web design e sviluppo</span><span><b>⌘</b> Hardware e software</span><span><b>◈</b> Assemblaggio PC</span><span><b>＋</b> Consulenza tech</span></div></div>
+
+    <section class="section" id="servizi">
+      <div class="container">
+        <div class="section-header"><div class="section-label">Cosa facciamo</div><h2>Tecnologia pensata intorno a te.</h2><p>Dall'idea alla soluzione finale, lavoriamo per rendere ogni progetto chiaro, funzionale e semplice da usare.</p></div>
+        <div class="services">
+          <article class="service"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01M7 13h4M7 16h8"/></svg></div><h3>Web design</h3><p>Siti moderni, responsive e progettati per raccontare la tua attività con chiarezza e personalità.</p></article>
+          <article class="service"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 4 6v5c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Supporto IT</h3><p>Aiuto nella diagnosi e risoluzione di problemi hardware, software, configurazioni e dispositivi.</p></article>
+          <article class="service"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="14" rx="2"/><path d="M8 21h8M12 17v4M8 7h8M8 11h5"/></svg></div><h3>PC custom</h3><p>Configurazioni su misura per gaming, studio e lavoro, con attenzione a compatibilità e budget.</p></article>
+          <article class="service"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2M3.8 5.8l2 2M20.2 5.8l-2 2"/></svg></div><h3>Consulenza tech</h3><p>Un confronto comprensibile per scegliere strumenti, migliorare il setup e prendere decisioni informate.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="progetti">
+      <div class="container">
+        <div class="section-header"><div class="section-label">Portfolio / concept</div><h2>Un assaggio del nostro approccio.</h2><p>Tre direzioni visive che mostrano come unire ordine, identità e funzionalità in progetti digitali e hardware.</p></div>
+        <div class="projects">
+          <article class="project"><img src="assets/project-web.svg" alt="Concept grafico per un sito web professionale" width="640" height="440" loading="lazy"><div class="project-body"><div class="project-meta">01 / Web experience</div><h3>Una presenza digitale chiara</h3><p>Una homepage essenziale che mette in evidenza identità, servizi e contatti senza distrazioni.</p></div></article>
+          <article class="project"><img src="assets/project-dashboard.svg" alt="Concept grafico di dashboard con statistiche e grafici" width="640" height="440" loading="lazy"><div class="project-body"><div class="project-meta">02 / Digital interface</div><h3>Informazioni a colpo d'occhio</h3><p>Una dashboard dimostrativa organizzata per rendere dati e strumenti più leggibili.</p></div></article>
+          <article class="project"><img src="assets/project-pc.svg" alt="Concept di PC custom nero con illuminazione viola" width="640" height="440" loading="lazy"><div class="project-body"><div class="project-meta">03 / Custom hardware</div><h3>Hardware con criterio</h3><p>Un concept per una build dal look pulito, con componenti scelti in base all'uso previsto.</p></div></article>
+        </div>
+        <p class="disclaimer">Le immagini e i progetti mostrati sono concept illustrativi realizzati per presentare lo stile dello studio, non lavori commissionati da clienti.</p>
+      </div>
+    </section>
+
+    <section class="section" id="metodo">
+      <div class="container">
+        <div class="section-header"><div class="section-label">Come lavoriamo</div><h2>Un processo semplice.<br>Zero passaggi poco chiari.</h2><p>Ogni collaborazione parte dall'ascolto e prosegue con obiettivi condivisi e aggiornamenti comprensibili.</p></div>
+        <div class="process-grid">
+          <article class="process-step"><h3>Ascolto</h3><p>Ci racconti cosa ti serve, il contesto e le priorità. Prima capiamo il problema, poi proponiamo.</p></article>
+          <article class="process-step"><h3>Proposta</h3><p>Definiamo insieme approccio, funzionalità e perimetro del lavoro, in modo chiaro fin dall'inizio.</p></article>
+          <article class="process-step"><h3>Realizzazione</h3><p>Sviluppiamo o configuriamo la soluzione con attenzione a usabilità, compatibilità e dettagli.</p></article>
+          <article class="process-step"><h3>Verifica e consegna</h3><p>Controlliamo il risultato, condividiamo le indicazioni utili e ti aiutiamo nel passaggio finale.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chi-siamo">
+      <div class="container about-grid">
+        <div class="about-art"><img src="assets/studio-principles.svg" alt="Illustrazione minimalista dei principi di design e tecnologia dello studio" width="640" height="640" loading="lazy"></div>
+        <div class="about-copy"><div class="section-label">Il nostro modo di pensare</div><h2>Essenziale non significa banale.</h2><p>Crediamo nelle soluzioni che fanno bene il loro lavoro. Per questo uniamo un design sobrio a scelte tecniche ragionate, evitando complessità inutili e dando valore a ogni dettaglio.</p><p>DevShell Studio è uno spazio per progetti digitali e supporto tecnologico costruiti con attenzione, dialogo e obiettivi concreti.</p>
+          <div class="principles"><div class="principle"><strong>Su misura</strong><span>Le esigenze guidano le scelte, non il contrario.</span></div><div class="principle"><strong>Trasparenza</strong><span>Spieghiamo le opzioni con parole semplici.</span></div><div class="principle"><strong>Cura</strong><span>Attenzione a funzionalità e dettagli.</span></div><div class="principle"><strong>Praticità</strong><span>Soluzioni utili anche dopo la consegna.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contatti">
+      <div class="container">
+        <div class="contact-panel">
+          <div class="contact-copy"><div class="section-label">Contatti</div><h2>Hai un'idea?<br>Partiamo da lì.</h2><p>Raccontaci cosa vuoi realizzare o quale problema vuoi risolvere. Ti risponderemo per capire insieme il prossimo passo.</p><a class="email-link" href="mailto:devshellstudiohelp@gmail.com">devshellstudiohelp@gmail.com ↗</a></div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-row"><div class="field"><label for="name">Nome</label><input id="name" name="name" autocomplete="name" required placeholder="Come ti chiami?"></div><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="nome@email.it"></div></div>
+            <div class="field"><label for="service">Di cosa hai bisogno?</label><select id="service" name="service" required><option value="">Seleziona un servizio</option><option>Web design</option><option>Assistenza hardware e software</option><option>Assemblaggio PC</option><option>Consulenza informatica</option><option>Altro</option></select></div>
+            <div class="field"><label for="message">Il tuo messaggio</label><textarea id="message" name="message" required placeholder="Descrivi brevemente la tua idea o necessità..."></textarea></div>
+            <button class="button button-primary" type="submit">Prepara email <span>↗</span></button><div class="form-status" id="formStatus" role="status" aria-live="polite"></div><p class="form-hint">Il pulsante apre il tuo programma email con il messaggio già compilato. Non viene inviato alcun dato a un server da questo sito.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><div class="footer-brand">DevShell Studio <small>Digital & Tech Studio</small></div><div class="footer-links"><a href="#servizi">Servizi</a><a href="#progetti">Portfolio</a><a href="#metodo">Metodo</a><a href="mailto:devshellstudiohelp@gmail.com">Email</a></div><div class="copyright">© <span id="year"></span> DevShell Studio. Tutti i diritti riservati.</div></div></footer>
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const navLinks=document.getElementById('navLinks');
+    menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.setAttribute('aria-label',open?'Chiudi menu':'Apri menu');menuBtn.textContent=open?'×':'☰';});
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.setAttribute('aria-label','Apri menu');menuBtn.textContent='☰';}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.currentTarget);const subject=encodeURIComponent('Richiesta informazioni — '+d.get('service'));const body=encodeURIComponent('Ciao DevShell Studio,\n\nNome: '+d.get('name')+'\nEmail: '+d.get('email')+'\nServizio: '+d.get('service')+'\n\nMessaggio:\n'+d.get('message'));document.getElementById('formStatus').textContent='Apertura del programma email…';window.location.href='mailto:devshellstudiohelp@gmail.com?subject='+subject+'&body='+body;});
+  </script>
+</body>
+</html>
